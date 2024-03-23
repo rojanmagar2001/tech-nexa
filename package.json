@@ -14,7 +14,8 @@
       "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
       "post-applypatch": "echo \"[Husky] post-applypatch\"",
       "pre-commit": "echo \"[Husky] pre-commit\" && lint && build && git add -A ."
-    },
+    }
+  },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-dialog": "^1.0.5",
