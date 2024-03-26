@@ -14,7 +14,6 @@ export default function MainHeaderDesktop() {
 
   const isHome = location === "/";
 
-  console.log(location);
   const [hovered, setHovered] = useState<HoveredDto>({
     name: "category",
     hovered: false,

@@ -60,7 +60,7 @@ const InteractiveMarquee: React.FC<HighlightPropArg> = ({
       onMouseLeave={handleMouseLeave}
     >
       <Swiper
-        speed={3000}
+        speed={8000}
         autoplay={{
           delay: 0,
           disableOnInteraction: false,
@@ -70,22 +70,25 @@ const InteractiveMarquee: React.FC<HighlightPropArg> = ({
         loop
         slidesPerView="auto"
         watchSlidesProgress
-        spaceBetween={40}
-        grabCursor
+        spaceBetween={15}
+        breakpoints={{
+          "640": {
+            spaceBetween: 30,
+          },
+        }}
         modules={[Autoplay, Parallax]}
         onInit={onInit}
-        // className="h-[200px]"
       >
         {content.map((image, index) => (
           <SwiperSlide
             key={index}
-            className="highlight-card !w-[200px] !h-[200px] rounded-lg overflow-hidden"
+            className="highlight-card !w-[120px] !h-[120px] sm:!w-[200px] sm:!h-[200px] rounded-lg overflow-hidden"
           >
-            <div className=" bg-gray-100 group relative w-full h-full cursor-pointer flex items-center justify-center">
+            <div className=" bg-white group relative w-full h-full cursor-pointer flex items-center justify-center">
               <div className="card-overlay absolute inset-0 w-full h-full bg-black opacity-0 group-hover:opacity-10 z-[10] transition-all duration-300 ease-in-out"></div>
               <a
                 href="/"
-                className="card-title w-[140px] absolute z-[20] text-white text-sm font-light opacity-0 group-hover:opacity-100 bg-primary px-2 py-2 rounded-md transition-all duration-300 ease-in-out flex items-center justify-center"
+                className="card-title w-[140px] absolute z-[20] text-white text-sm font-light opacity-0 group-hover:opacity-100 bg-primary px-2 py-2 rounded-md transition-all duration-300 ease-in-out hidden. sm:flex items-center justify-center"
               >
                 <LuSearchCode size={24} className="stroke-white mr-1" />
                 Show Similar
