@@ -103,8 +103,8 @@ export default function FeaturedSlider() {
             <Image
               src={slide.image}
               alt={slide.title}
-              width={300}
-              height={350}
+              width={4320}
+              height={2160}
               className="absolute w-full h-full inset-0 -z-[1] object-cover object-center"
             />
           </SwiperSlide>

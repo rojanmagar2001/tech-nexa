@@ -12,7 +12,7 @@ export default function MainLayout({
         <TopHeader />
         <MainHeader />
       </header>
-      <main className="overflow-hidden flex flex-col gap-y-24">{children}</main>
+      <main className="overflow-hidden flex flex-col">{children}</main>
     </>
   );
 }
