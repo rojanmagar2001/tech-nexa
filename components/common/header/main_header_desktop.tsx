@@ -20,7 +20,7 @@ export default function MainHeaderDesktop() {
   });
   const [search, setSearch] = useState(false);
   return (
-    <nav className="hidden lg:flex w-full px-16 py-4 justify-center items-center text-sm font-semibold relative">
+    <nav className="hidden lg:flex w-full px-16 py-4 justify-center items-center text-sm font-semibold fixed top-0 z-[1000] bg-white">
       <div className="flex gap-x-4 items-center">
         <a
           href="/"
