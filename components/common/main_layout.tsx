@@ -9,10 +9,12 @@ export default function MainLayout({
   return (
     <>
       <header className="">
-        <TopHeader />
+        {/* <TopHeader /> */}
         <MainHeader />
       </header>
-      <main className="overflow-hidden flex flex-col pt-4">{children}</main>
+      <main className="overflow-hidden flex flex-col pt-16 bg-gray-100">
+        {children}
+      </main>
     </>
   );
 }

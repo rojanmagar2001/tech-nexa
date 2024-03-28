@@ -9,7 +9,7 @@ export default function FeaturedBanner() {
   const imageGallery3 = data.images.slice(30, 40);
 
   return (
-    <section className="bg-white pt-4 pb-12 flex flex-col gap-y-12 sm:gap-y-8 lg:gap-y-10 relative">
+    <section className="pt-4 pb-12 flex flex-col gap-y-12 sm:gap-y-8 lg:gap-y-10 relative">
       <InteractiveMarquee content={imageGallery1} />
       <InteractiveMarquee content={imageGallery2} reverse={true} />
       <InteractiveMarquee content={imageGallery3} />

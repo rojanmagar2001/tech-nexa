@@ -95,7 +95,7 @@ export default function SubHeaderDesktop({
           initial={{ scaleY: 0, opacity: 0 }}
           animate={{ scaleY: 1, opacity: 1 }}
           exit={{ scaleY: 0, transition: { delay: 0.2 }, opacity: 0 }}
-          className="bg-primary absolute self-center top-12 w-[calc(100vw-6rem)] px-20 py-16 mx-10 min-h-fit z-[100] origin-top rounded-b-md"
+          className="bg-gray-800 absolute self-start top-12 w-[calc(100vw-6rem)] px-20 py-16 mx-10 min-h-fit z-[100] origin-top rounded-b-md"
           onMouseEnter={() => {
             setHovered({
               ...hovered,
@@ -134,7 +134,6 @@ export default function SubHeaderDesktop({
               </ul>
             ))}
           </motion.div>
-          )
         </motion.div>
       )}
     </AnimatePresence>

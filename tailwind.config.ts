@@ -60,7 +60,7 @@ const config = {
       },
       backgroundImage: {
         "radial-gradient":
-          "radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 47%, rgba(0,212,255,0) 80%);",
+          "radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 47%, rgba(0,212,255,0) 60%);",
         // "radial-gradient":
         //   "radial-gradient(40% 80% at 50% 50%, color(display-p3 255 255 255 / 1) 60.89%, color(display-p3 255 255 255 / 0) 100%)",
         "radial-gradient-sm":
