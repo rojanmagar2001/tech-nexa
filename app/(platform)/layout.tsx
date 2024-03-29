@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Jost } from "next/font/google";
 import "@/app/globals.css";
-import MainLayout from "@/components/common/main_layout";
+import LandingLayout from "@/components/common/header/landing/landing_layout";
 
 const inter = Jost({
   subsets: ["latin"],
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <MainLayout>{children}</MainLayout>
+        <LandingLayout>{children}</LandingLayout>
       </body>
     </html>
   );
