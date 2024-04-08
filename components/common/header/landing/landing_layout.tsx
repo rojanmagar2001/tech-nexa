@@ -9,7 +9,7 @@ const LandingLayout: React.FC<LandingLayoutProps> = ({ children }) => {
   return (
     <>
       <LandingHeader />
-      <main className="pt-14">{children}</main>
+      <main className="pt-20">{children}</main>
     </>
   );
 };

@@ -5,30 +5,45 @@ import { motion } from "framer-motion";
 import { TbShoppingCartCheck } from "react-icons/tb";
 import { MdFavoriteBorder } from "react-icons/md";
 import Link from "next/link";
+import { BsStars } from "react-icons/bs";
+import useChatModal from "@/hooks/products/use-chat-modal";
+import { usePathname } from "next/navigation";
 
 interface LandingMainHeaderProps {
   visible: boolean;
+  isHome: boolean;
 }
 
-const LandingMainHeader: React.FC<LandingMainHeaderProps> = ({ visible }) => {
+const LandingMainHeader: React.FC<LandingMainHeaderProps> = ({
+  visible,
+  isHome,
+}) => {
+  const url = usePathname();
+  const chatModal = useChatModal();
   return (
     <nav className="px-12 py-4 flex justify-between items-center fixed z-[100] bg-white w-full">
-      <Image src="/logo1.png" alt="logo" width={100} height={50} />
+      <Link href="/">
+        <Image src="/logo1.png" alt="logo" width={100} height={50} />
+      </Link>
       <motion.span
-        initial={{
-          opacity: 0,
-          scale: 0.6,
-        }}
+        initial={
+          isHome && {
+            opacity: 0,
+            scale: 0.6,
+          }
+        }
         animate={
-          visible
-            ? {
-                opacity: 1,
-                scale: 1,
-              }
-            : {
-                opacity: 0,
-                scale: 0.6,
-              }
+          isHome
+            ? visible
+              ? {
+                  opacity: 1,
+                  scale: 1,
+                }
+              : {
+                  opacity: 0,
+                  scale: 0.6,
+                }
+            : {}
         }
         transition={{
           duration: 0.4,
@@ -38,17 +53,23 @@ const LandingMainHeader: React.FC<LandingMainHeaderProps> = ({ visible }) => {
         <SearchInput />
       </motion.span>
       <div className="flex gap-x-4 items-center">
+        <button
+          onClick={() => chatModal.toggleModal(chatModal.isOpen)}
+          className="p-3 rounded-full hover:bg-gray-100 transition-all duration-100"
+        >
+          <BsStars size={24} className="!stroke-gray-900" />
+        </button>
         <Link
           href="/"
-          className="p-2 rounded-full hover:bg-gray-100 transition-all duration-100"
+          className="p-3 rounded-full hover:bg-gray-100 transition-all duration-100"
         >
-          <TbShoppingCartCheck size={30} className="!stroke-gray-700" />
+          <TbShoppingCartCheck size={24} className="!stroke-gray-900" />
         </Link>
         <Link
           href="/"
-          className="p-2 rounded-full hover:bg-gray-100 transition-all duration-100"
+          className="p-3 rounded-full hover:bg-gray-100 transition-all duration-100"
         >
-          <MdFavoriteBorder size={30} className="!fill-gray-700" />
+          <MdFavoriteBorder size={24} className="!stroke-gray-900" />
         </Link>
         <Link
           href="/"

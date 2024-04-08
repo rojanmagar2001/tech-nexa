@@ -1,3 +1,9 @@
+import ProductsProvider from "@/providers/products/products-provider";
+
 export default function Page() {
-  return <div className="h-[200vh]"></div>;
+  return (
+    <>
+      <ProductsProvider />
+    </>
+  );
 }
