@@ -11,7 +11,7 @@ const ProductsProvider = () => {
     <div
       className={cn(
         `flex gap-x-2 px-4 py-2 relative h-full`,
-        modal.isOpen && !modal.small && "bg-gray-100"
+        modal.isOpen && !modal.small && "bg-foreground"
       )}
     >
       <ProductsSection chatModal={modal} />

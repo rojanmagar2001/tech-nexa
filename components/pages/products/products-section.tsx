@@ -13,8 +13,8 @@ const ProductsSection: React.FC<ProductsSectionProps> = ({ chatModal }) => {
   return (
     <section
       className={cn(
-        "flex flex-col p-3 bg-white",
-        chatModal.isOpen && !chatModal.small && "w-[75%]"
+        "flex flex-col p-3",
+        chatModal.isOpen && !chatModal.small && "w-[75%] bg-card"
       )}
     >
       <div

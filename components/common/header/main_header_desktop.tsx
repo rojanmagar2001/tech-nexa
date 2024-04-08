@@ -41,7 +41,7 @@ export default function MainHeaderDesktop({ visible }: MainHeaderDesktopProps) {
           duration: 0.4,
           ease: "easeInOut",
         }}
-        className="hidden lg:flex w-full px-16 py-4 justify-center items-center text-sm font-semibold fixed top-0 z-[1000] bg-white"
+        className="hidden lg:flex w-full px-16 py-4 justify-center items-center text-sm font-semibold fixed top-0 z-[1000] bg-background"
       >
         <div className="flex gap-x-4 items-center">
           <a

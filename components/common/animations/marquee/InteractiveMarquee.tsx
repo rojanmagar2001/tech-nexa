@@ -84,7 +84,7 @@ const InteractiveMarquee: React.FC<HighlightPropArg> = ({
             key={index}
             className="highlight-card !w-[120px] !h-[120px] sm:!w-[200px] sm:!h-[200px] rounded-lg overflow-hidden"
           >
-            <div className=" bg-white group relative w-full h-full cursor-pointer flex items-center justify-center">
+            <div className=" bg-background group relative w-full h-full cursor-pointer flex items-center justify-center">
               <div className="card-overlay absolute inset-0 w-full h-full bg-black opacity-0 group-hover:opacity-10 z-[10] transition-all duration-300 ease-in-out"></div>
               <a
                 href="/"

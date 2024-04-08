@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Jost } from "next/font/google";
 import "@/app/globals.css";
 import LandingLayout from "@/components/common/header/landing/landing_layout";
+import CustomThemeProviders from "@/providers/theme-providers";
 
 const inter = Jost({
   subsets: ["latin"],
@@ -21,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <LandingLayout>{children}</LandingLayout>
+        <CustomThemeProviders>
+          <LandingLayout>{children}</LandingLayout>
+        </CustomThemeProviders>
       </body>
     </html>
   );

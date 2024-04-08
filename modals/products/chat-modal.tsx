@@ -16,18 +16,18 @@ const ChatModal: React.FC<ChatModalProps> = ({ chatModal }) => {
         !chatModal.isOpen ? "hidden" : "flex-1"
       )}
     >
-      <div className="bg-background h-full rounded-md">
+      <div className="bg-card h-full rounded-md">
         <div className="w-full flex justify-between px-2 items-center">
-          <h3>Shop AI</h3>
+          <h3 className="text-primary">Shop AI</h3>
           <div className="flex gap-x-4">
-            <button className="p-2 rounded-full hover:bg-foreground transition-all duration-100">
-              <TbSquareToggleHorizontal size={24} />
+            <button className="p-2 rounded-full hover:bg-secondary transition-all duration-100">
+              <TbSquareToggleHorizontal size={24} className="!stroke-primary" />
             </button>
             <button
               onClick={() => chatModal.toggleModal(chatModal.isOpen)}
-              className="p-2 rounded-full hover:bg-foreground transition-all duration-100"
+              className="p-2 rounded-full hover:bg-secondary transition-all duration-100"
             >
-              <IoMdClose size={24} />
+              <IoMdClose size={24} className="!fill-primary" />
             </button>
           </div>
         </div>
